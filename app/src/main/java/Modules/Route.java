@@ -1,8 +1,11 @@
-package com.cav.m_tiba.Modules;
+package Modules;
 
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.List;
+
+import Modules.Distance;
+import Modules.Duration;
 
 public class Route {
     public Distance distance;

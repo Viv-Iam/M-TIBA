@@ -1,4 +1,4 @@
-package com.cav.m_tiba.Modules;
+package Modules;
 
 /**
  * Created by vivian on 29/09/17.

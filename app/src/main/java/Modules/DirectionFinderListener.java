@@ -1,8 +1,6 @@
-package com.cav.m_tiba.Modules;
+package Modules;
 
 import java.util.List;
-
-import Modules.Route;
 
 /**
  * Created by Mai Thanh Hiep on 4/3/2016.
