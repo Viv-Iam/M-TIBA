@@ -6,20 +6,31 @@
     android:layout_height="match_parent"
     tools:context="com.cav.m_tiba.ui.MainActivity">
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Hello World!"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-    <Button
-        android:id="@+id/button2"
+    <EditText
+        android:id="@+id/tillEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View on Map"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="132dp" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_till_number"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.503" />
+
+    <Button
+        android:id="@+id/findTillButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/tillEditText"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
