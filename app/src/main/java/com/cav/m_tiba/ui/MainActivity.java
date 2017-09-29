@@ -1,7 +1,9 @@
-package com.cav.m_tiba;
+package com.cav.m_tiba.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.cav.m_tiba.R;
 
 public class MainActivity extends AppCompatActivity {
 
