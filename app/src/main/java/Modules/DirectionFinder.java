@@ -23,7 +23,7 @@ import java.util.List;
  */
 public class DirectionFinder {
     private static final String DIRECTION_URL_API = "https://maps.googleapis.com/maps/api/directions/json?";
-    private static final String GOOGLE_API_KEY = "AIzaSyDnwLF2-WfK8cVZt9OoDYJ9Y8kspXhEHfI";
+    private static final String GOOGLE_API_KEY = "AIzaSyBhDmvNa0c9HhdCcNA1gPZVqhjRoKts6n8";
     private DirectionFinderListener listener;
     private String origin;
     private String destination;
@@ -33,19 +33,20 @@ public class DirectionFinder {
         this.origin = origin;
         this.destination = destination;
     }
-
+    //execute will download raw json data
     public void execute() throws UnsupportedEncodingException {
         listener.onDirectionFinderStart();
         new DownloadRawData().execute(createUrl());
     }
-
+    //createURL() function creates a link from entered origin, destination and key from user input
     private String createUrl() throws UnsupportedEncodingException {
+        //URLEncorder will encode the user input into URL format
         String urlOrigin = URLEncoder.encode(origin, "utf-8");
         String urlDestination = URLEncoder.encode(destination, "utf-8");
 
         return DIRECTION_URL_API + "origin=" + urlOrigin + "&destination=" + urlDestination + "&key=" + GOOGLE_API_KEY;
     }
-
+    //below independent thread other than UI thread to download rawdata after getting link
     private class DownloadRawData extends AsyncTask<String, Void, String> {
 
         @Override
@@ -71,7 +72,7 @@ public class DirectionFinder {
             }
             return null;
         }
-
+        //after completely downloading data an onPostExecute is processed
         @Override
         protected void onPostExecute(String res) {
             try {
@@ -81,13 +82,15 @@ public class DirectionFinder {
             }
         }
     }
-
+    //parse json is invoked to get neccessary information
     private void parseJSon(String data) throws JSONException {
         if (data == null)
             return;
 
         List<Route> routes = new ArrayList<Route>();
+        //will create new jsonData
         JSONObject jsonData = new JSONObject(data);
+        //below line will retreive routes JASONArray from jsondata
         JSONArray jsonRoutes = jsonData.getJSONArray("routes");
         for (int i = 0; i < jsonRoutes.length(); i++) {
             JSONObject jsonRoute = jsonRoutes.getJSONObject(i);
