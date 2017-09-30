@@ -10,7 +10,6 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,12 +28,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.HamburgerMenuActivity"
             android:label="@string/title_activity_hamburger_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ui.FindClincsActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,18 +46,7 @@
 
         <activity
             android:name=".ui.MapsActivity"
-<<<<<<< HEAD
             android:label="@string/title_activity_maps" />
-        <activity android:name=".ui.FindClinic"></activity>
     </application>
 
-</manifest> <!-- <activity --><!-- android:name=".MapsActivity" --><!-- android:label="@string/title_activity_maps"> --><!--  --><!-- </activity> -->
-=======
-            android:label="@string/title_activity_maps"></activity>
-
-    </application>
-
-</manifest>
-
-    
->>>>>>> 8d7175938924a1f5ecbc7002517d2dc693ac4a33
+</manifest> <!-- <activity --><!-- android:name=".MapsActivity" --><!-- android:label="@string/title_activity_maps"> --><!--  --><!-- </activity> --><!-- android:label="@string/title_activity_maps"></activity> --><!-- </application> --><!-- </manifest> -->
