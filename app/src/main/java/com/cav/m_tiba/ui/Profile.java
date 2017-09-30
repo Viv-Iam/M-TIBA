@@ -46,6 +46,7 @@ public class Profile extends AppCompatActivity {
 
     }
 
+
     public void newprofile(View view) {
         int getselectedid = radioSexGroup.getCheckedRadioButtonId();
         radioSexGroup = (RadioGroup) findViewById(getselectedid);
@@ -72,9 +73,9 @@ public class Profile extends AppCompatActivity {
         }
         if (!new_mail.matches("[a-zA-Z0-9]+@[a-z]+.[a-z]{3}")){
             Toast.makeText(this,"That is not a valid email address",Toast.LENGTH_SHORT).show();
+            return;
         }
-        progressDialog.setMessage("Please wait while you get registerd.....");
-        progressDialog.show();
-
+        Intent intent = new Intent(Profile.this, HamburgerMenuActivity.class);
+        startActivity(intent);
     }
 }

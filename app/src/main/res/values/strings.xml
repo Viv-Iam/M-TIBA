@@ -38,12 +38,13 @@
     <string name="login_forgotpass">Forgot Password ?</string>
     <string name="login_not_member">Not a Member ?</string>
     <string name="signup_link">Sign Up</string>
-    <string name="our_terms">
+
 <string name="new_uname">Enter Username</string>
 <string name="new_email">Enter Email Address</string>
 <string name="new_terms">Accept terms and</string>
 <string name="andcond">Conditions</string>register
 <string name="reg_user">Register</string>
+    <string name="our_terms">
     The use of this website is subject to the following terms of use:
 
 The content of the pages of this website is for your general information and use only. It is subject to change without notice.

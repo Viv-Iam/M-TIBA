@@ -26,7 +26,7 @@ import okhttp3.Response;
 import static android.R.attr.phoneNumber;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
-public class Checkuser extends AppCompatActivity implements View.OnClickListener  {
+public class Checkuser extends AppCompatActivity  {
 
     @Bind(R.id.submit_number) Button mSubmit_number;
     @Bind(R.id.new_number) EditText mNew_number;
@@ -36,54 +36,54 @@ public class Checkuser extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.checkuser_activity);
     }
 
-    @Override
-    public void onClick(View view) {
-        AccountService  accountService = new AccountService();
-        if (view == mSubmit_number){
-            String phoneNumber = mNew_number.getText().toString().trim();
-            AccountService.checkUser(phoneNumber, new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
-                    //Something went wrong do something
-                }
-
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    try{
-                        String jsonData = response.body().string();
-                        if (response.isSuccessful()){
-                            JSONObject userObject = new JSONObject(jsonData);
-                            boolean hasPassword = userObject.getBoolean("hasPassword");
-                            if (!hasPassword){
-                                Intent intent = new Intent(getApplicationContext(), Profile.class);
-                                String phoneNumber = mNew_number.getText().toString().trim();
-                                intent.putExtra("phoneNumber",phoneNumber);
-                                startActivity(intent);
-                                finish();
-                            }else{
-                                Intent intent = new Intent(getApplicationContext(), HamburgerMenuActivity.class);
-                                String phoneNumber = mNew_number.getText().toString().trim();
-                                intent.putExtra("phoneNumber",phoneNumber);
-                                startActivity(intent);
-                            }
-                        }
-                    }catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-        }
-    }
-
-//    public void enternumber(View view) {
+//    @Override
+//    public void onClick(View view) {
+//        AccountService  accountService = new AccountService();
+//        if (view == mSubmit_number){
+//            String phoneNumber = mNew_number.getText().toString().trim();
+//            AccountService.checkUser(phoneNumber, new Callback() {
+//                @Override
+//                public void onFailure(Call call, IOException e) {
+//                    //Something went wrong do something
+//                }
 //
-////        String phoneNumber = mNew_number.getText().toString().trim();
-//        Intent intent = new Intent(getApplicationContext(), Profile.class);
-////        intent.putExtra("phoneNumber",phoneNumber);phoneNumber
-//        startActivity(intent);
+//                @Override
+//                public void onResponse(Call call, Response response) throws IOException {
+//                    try{
+//                        String jsonData = response.body().string();
+//                        if (response.isSuccessful()){
+//                            JSONObject userObject = new JSONObject(jsonData);
+//                            boolean hasPassword = userObject.getBoolean("hasPassword");
+//                            if (!hasPassword){
+//                                Intent intent = new Intent(getApplicationContext(), Profile.class);
+//                                String phoneNumber = mNew_number.getText().toString().trim();
+//                                intent.putExtra("phoneNumber",phoneNumber);
+//                                startActivity(intent);
+//                                finish();
+//                            }else{
+//                                Intent intent = new Intent(getApplicationContext(), HamburgerMenuActivity.class);
+//                                String phoneNumber = mNew_number.getText().toString().trim();
+//                                intent.putExtra("phoneNumber",phoneNumber);
+//                                startActivity(intent);
+//                            }
+//                        }
+//                    }catch (IOException e) {
+//                        e.printStackTrace();
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            });
+//        }
 //    }
+
+    public void enternumber(View view) {
+
+//        String phoneNumber = mNew_number.getText().toString().trim();
+        Intent intent = new Intent(getApplicationContext(), Profile.class);
+//        intent.putExtra("phoneNumber",phoneNumber);phoneNumber
+        startActivity(intent);
+    }
 
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
