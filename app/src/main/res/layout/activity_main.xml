@@ -22,11 +22,4 @@
         android:text="View on Map"
         tools:layout_editor_absoluteX="159dp"
         tools:layout_editor_absoluteY="132dp" />
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View on Clinic"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="182dp" />
 </android.support.constraint.ConstraintLayout>
