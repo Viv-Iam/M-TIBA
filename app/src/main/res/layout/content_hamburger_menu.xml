@@ -12,6 +12,7 @@
         android:id="@+id/myBenefits"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="myBenefits"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -27,6 +28,7 @@
         android:id="@+id/findClients"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="findClinic"
         android:text="@string/find_clients"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/myBenefits"
@@ -42,6 +44,7 @@
         android:id="@+id/myDependants"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="myDependents"
         android:text="@string/my_dependants"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/findClients"
@@ -57,6 +60,7 @@
         android:id="@+id/contacts"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="contactUs"
         android:text="Contacts"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/myDependants"
@@ -72,6 +76,7 @@
         android:id="@+id/helpButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="terms_conditions"
         android:text="@string/help"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/contacts"
@@ -83,15 +88,15 @@
         android:layout_marginEnd="8dp"
         android:background="@android:color/white"/>
 
-    <TextView
-        android:id="@+id/tillText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/helpButton"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+    <!--<TextView-->
+        <!--android:id="@+id/tillText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TextView"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/helpButton"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent" />-->
 </android.support.constraint.ConstraintLayout>

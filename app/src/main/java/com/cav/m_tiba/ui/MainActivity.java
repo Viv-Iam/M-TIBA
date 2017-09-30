@@ -2,6 +2,7 @@ package com.cav.m_tiba.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.BinderThread;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,35 +15,29 @@ import com.cav.m_tiba.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-import static com.cav.m_tiba.R.id.tillEditText;
 
 /**
  * Created by wasike on 29/09/17.
  */
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity{
 
-    @Bind(R.id.findTillButton) Button mFindTillButton;
-    @Bind(tillEditText) EditText mTillEditText;
-
+public static int time_out = 3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ButterKnife.bind(this);
+        new Handler().postDelayed(new Runnable() {
 
-        mFindTillButton.setOnClickListener(this);
-    }
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, Checkuser.class);
+                startActivity(intent);
 
-    @Override
-    public void onClick(View view) {
-        Log.v("click", "click");
-        if(view == mFindTillButton) {
-            String till = mTillEditText.getText().toString();
-            Intent intent = new Intent(MainActivity.this, HamburgerMenuActivity.class);
-            intent.putExtra("till", till);
-            startActivity(intent);
-        }
+                finish();
+            }
+        }, time_out);
+
     }
 }

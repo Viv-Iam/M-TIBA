@@ -6,6 +6,7 @@ package com.cav.m_tiba;
 
 public class Constants {
     public static final String MTIBA_TOKEN = BuildConfig.MTIBA_TOKEN;
+    public static final String BASE_URL = "http://usermanagement-test.ap-southeast-1.elasticbeanstalk.com";
     public static final String PROGRAM_BASE_URL = "http://program-service-test.ap-southeast-1.elasticbeanstalk.com/accountholders/user/";
     public static final String MTIBA_BASE_URL = "http://provider-service-test.ap-southeast-1.elasticbeanstalk.com/providers";
     public static final String MTIBA_QUERY_PARAMETER = "q";

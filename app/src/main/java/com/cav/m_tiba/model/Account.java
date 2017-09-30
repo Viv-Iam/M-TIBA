@@ -6,30 +6,38 @@ package com.cav.m_tiba.model;
 
 public class Account {
     private String id;
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
     private String phoneNumber;
-    private String dateAdded;
+    private String dateOfBirth;
     private String providerName;
 
-//    public Account{}
-    public Account(String id,String name,String email,String phoneNumber,
-                   String dateAdded,String providerName ){
+
+    public Account(){}
+
+        public Account(String id,String firstName,String lastName,String email,String phoneNumber,
+                   String dateOfBirth,String providerName ){
         this.id = id;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.dateAdded = dateAdded;
+        this.dateOfBirth = dateOfBirth;
         this.providerName = providerName;
-    }
+        }
 
         public String getId(){
             return id;
         }
 
-        public String getName(){
-            return name;
+        public String getFirstName(){
+            return firstName;
 
+        }
+
+        public String getLastName(){
+        return lastName;
         }
 
     public String getEmail() {
@@ -40,8 +48,8 @@ public class Account {
         return phoneNumber;
     }
 
-    public String getDateAdded() {
-        return dateAdded;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
     public String getProviderName() {

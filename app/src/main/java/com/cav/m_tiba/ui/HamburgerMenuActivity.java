@@ -30,7 +30,7 @@ public class HamburgerMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public static final String TAG = HamburgerMenuActivity.class.getSimpleName();
 
-    @Bind(R.id.tillText) TextView TillText;
+//    @Bind(R.id.tillText) TextView TillText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class HamburgerMenuActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Welcome to M-Tiba", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -68,17 +68,7 @@ public class HamburgerMenuActivity extends AppCompatActivity
     private void getAccounts(String till){
         final AccountService accountService = new AccountService();
 
-        accountService.findTills(till, new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
 
-            @Override
-            public void onResponse(Call call, Response response) {
-//                mTills
-            }
-        });
     }
 
     @Override
@@ -137,4 +127,24 @@ public class HamburgerMenuActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+//    public void contactUs(View view) {
+//        Intent intent = new Intent(HamburgerMenuActivity.this,Cont.class);
+//    }
+//    public void myDependents(View view){
+//        Intent intent = new Intent(HamburgerMenuActivity.this, .class);
+//    }
+
+    public void findClinic(View view){
+        Intent intent = new Intent(HamburgerMenuActivity.this, FindClincsActivity.class);
+
+    }
+
+    public void terms_conditions(View view) {
+        Intent intent = new Intent(HamburgerMenuActivity.this, Conditions.class);
+    }
+
+//    public void myBenefits(View view){
+//        Intent intent =
+//    }
 }
