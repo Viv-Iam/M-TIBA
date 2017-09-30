@@ -46,7 +46,8 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".ui.Checkuser" />
-        <activity android:name=".ui.Profile" />
+        <activity android:name=".ui.Profile"
+            android:label="Profile"/>
         <activity android:name=".ui.Conditions"
             android:label="Terms and Conditions"
             />
