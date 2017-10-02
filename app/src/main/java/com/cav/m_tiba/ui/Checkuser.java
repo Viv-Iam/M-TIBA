@@ -80,7 +80,7 @@ public class Checkuser extends AppCompatActivity  {
     public void enternumber(View view) {
 
 //        String phoneNumber = mNew_number.getText().toString().trim();
-        Intent intent = new Intent(getApplicationContext(), Profile.class);
+        Intent intent = new Intent(getApplicationContext(), HamburgerMenuActivity.class);
 //        intent.putExtra("phoneNumber",phoneNumber);phoneNumber
         startActivity(intent);
     }

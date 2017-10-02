@@ -126,20 +126,21 @@ public class HamburgerMenuActivity extends AppCompatActivity
         return true;
     }
 
-//    public void contactUs(View view) {
-//        Intent intent = new Intent(HamburgerMenuActivity.this,Cont.class);
-//    }
+    public void contactUs(View view) {
+        Intent intent = new Intent(HamburgerMenuActivity.this,Profile.class);
+        startActivity(intent);
+    }
 //    public void myDependents(View view){
 //        Intent intent = new Intent(HamburgerMenuActivity.this, .class);
 //    }
 
-    public void findClinic(View view){
-        Intent intent = new Intent(HamburgerMenuActivity.this, FindClincsActivity.class);
+   // public void findClinic(View view){
+    //    Intent intent = new Intent(HamburgerMenuActivity.this, FindClincsActivity.class);
 
-    }
-
+///
     public void terms_conditions(View view) {
         Intent intent = new Intent(HamburgerMenuActivity.this, Conditions.class);
+        startActivity(intent);
     }
 
 //    public void myBenefits(View view){

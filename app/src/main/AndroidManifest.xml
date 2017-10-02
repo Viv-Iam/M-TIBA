@@ -32,7 +32,9 @@
             android:name=".ui.HamburgerMenuActivity"
             android:label="@string/title_activity_hamburger_menu"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".ui.FindClincsActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -45,6 +47,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+
         <activity android:name=".ui.Checkuser" />
         <activity android:name=".ui.Profile"
             android:label="Profile"/>
@@ -55,3 +58,6 @@
     </application>
 
 </manifest>
+
+
+
