@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.v("click", "click");
         if(view == mFindTillButton) {
             String till = mTillEditText.getText().toString();
-            Intent intent = new Intent(MainActivity.this, HamburgerMenuActivity.class);
+            Intent intent = new Intent(MainActivity.this, MapsActivity.class);
             intent.putExtra("till", till);
             startActivity(intent);
         }
